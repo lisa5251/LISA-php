@@ -14,6 +14,8 @@
     $a = 50;
     $b= 10;
     $age2=15;
+    $day = "E enjte";
+
     if($num < 0){
         echo "$num is less than 0" . "<br>";
     }
@@ -53,6 +55,57 @@
             break;
             default:
             echo "Invalid age input.";
+    }
+
+    switch($day){
+        case "E hene":
+            echo "sot eshte dite e hene";
+            break;
+        case "E marte":
+            echo "sot eshte dite e marte";
+            break;
+        case "E merkure":
+            echo "sot eshte dite e merkure";
+            break;
+        case "E enjte":
+            echo "sot eshte dite e enjte";
+            break;
+        case "E premte":
+            echo "sot eshte dite e premte";
+            break;
+        case "E shtune":
+            echo "sot eshte dite e shtune";
+            break;
+        case "E diel":
+            echo "sot eshte dite e diel";
+            break;
+    }
+
+    $whilevar = 1;
+    while($whilevar <= 5){
+        echo "<br> Numri is $whilevar <br>";
+        $whilevar++;
+    }
+
+    $dowhile = 1;
+    do{
+        echo "<br> Numri is $dowhile <br>";
+        $dowhile++;
+    }while($dowhile <= 5);
+    for($forvar = 0; $forvar <= 10; $forvar++){
+        echo "<br> Numri is $forvar <br>";
+    }
+    ?>
+    <?php
+    $cars = array("volo", "bmw", "tesla", "audi");
+    foreach($cars as $value){
+        echo "$value <br>";
+    }
+    ?>
+    <?php
+    $age3 = array("John" =>"18","Micheal" =>"23","John" =>"10");
+    foreach($age3 as $x1 => $val){
+        echo "Name: $x1, Age: $val <br>";
     }
     ?>
 </body>
