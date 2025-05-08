@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+
+    <style>
+        table,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td,th{
+           
+             padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
     <?php
