@@ -12,7 +12,6 @@
     <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
     <style>
 
-
         html,
     body {
       height: 100%;
@@ -26,14 +25,15 @@
       padding-bottom: 40px;
       background-color: #f5f5f5;
     }
-    
-    
+
+
     .form-signin {
       width: 100%;
       max-width: 330px;
       padding: 15px;
       margin: auto;
     }
+
         .form-signin .checkbox {
       font-weight: 400;
     }
@@ -80,7 +80,8 @@
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="email">
       <label for="floatingInput">Email</label>
-    </div> <div class="form-floating">
+    </div>
+     <div class="form-floating">
       <input type="password" class="form-control" id="floatingInput" placeholder="Password" name="password">
       <label for="floatingInput">Password</label>
     </div>

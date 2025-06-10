@@ -51,6 +51,7 @@ CREATE TABLE `bookings` (
 
 INSERT INTO `bookings` (`id`, `user_id`, `movie_id`, `nr_tickets`, `date`, `is_approved`, `time`) VALUES
 (3, 2, 1, 2, '2022-12-16', 'true', '19:00');
+
 CREATE TABLE `movies` (
   `id` int(255) NOT NULL,
   `movie_name` varchar(255) NOT NULL,
@@ -93,23 +94,6 @@ INSERT INTO `users` (`id`, `emri`, `username`, `email`, `password`, `confirm_pas
 (3, 'linda', 'linda', 'linda@linda.com', '$2y$10$pzATPYrl/LDDmFp8DIxalOrvUNT2RL4.I3pFbRjGrsUE8L/xH9O32', '$2y$10$q.HH1oolBta2lTtF/uCIGu2lwLhoHvKoWljOfqV1TAB5ER44EAQUG', 'true');
 
 ALTER TABLE `bookings`
-  ADD PRIMARY KEY (`id`);
-
-
---
--- Indexes for table `movies`
---
-ALTER TABLE `movies`
-  ADD PRIMARY KEY (`id`);
-
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `bookings`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 
@@ -126,5 +110,22 @@ ALTER TABLE `movies`
 ALTER TABLE `users`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
+
+ALTER TABLE `bookings`
+  ADD PRIMARY KEY (`id`);
+
+
+--
+-- Indexes for table `movies`
+--
+ALTER TABLE `movies`
+  ADD PRIMARY KEY (`id`);
+
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 
