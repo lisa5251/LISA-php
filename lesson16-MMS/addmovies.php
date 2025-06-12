@@ -11,13 +11,15 @@ if(isset($_POST['submit'])){
     $sql = "INSERT INTO movies(movie_name, movie_desc, movie_quality, movie_rating, movie_image) VALUES (:movie_name, :movie_desc, :movie_quality, :movie_rating, :movie_image)";
 
     $insertMovie = $conn -> prepare($sql);
-	$prep->bindParam(':movie_name', $movie_name);
-	$prep->bindParam(':movie_desc', $movie_desc);
-	$prep->bindParam(':movie_quality', $movie_quality);
-	$prep->bindParam(':movie_rating', $movie_rating);
 
-	$prep->execute();
+	$insertMovie->bindParam(':movie_name', $movies_name);
+	$insertMovie->bindParam(':movie_desc', $movies_desc);
+	$insertMovie->bindParam(':movie_quality', $movies_quality);
+	$insertMovie->bindParam(':movie_rating', $movies_rating);
+    $insertMovie->bindParam(':movie_image', $movies_image);
 
-	header("Location:dashboard.php");
+	$insertMovie->execute();
+
+	header("Location:movies.php");
 }
 ?>
