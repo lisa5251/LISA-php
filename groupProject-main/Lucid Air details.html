@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucid Air</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        h1 {
+            color: #222;
+        }
+    
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+        }
+    
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    
+        .slide {
+            display: none;
+        }
+    
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    
+        .prev, .next {
+            margin-top: 10px;
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    
+        .prev:hover, .next:hover {
+            background-color: #494343;
+        }
+    
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+    
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+    
+        th {
+            background-color: #222;
+            color: white;
+        }
+    
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Car Dealership</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav><br><br><br><br>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="text-center">Lucid Air</h1>
+        <p class="text-center">The Lucid Air is a groundbreaking electric luxury sedan that combines innovative technology, stunning design, and unparalleled performance.</p>
+    </div>
+
+    <div class="container">
+        <h1>Lucid Air - Innovation and Luxury</h1>
+        <p>
+            The Lucid Air redefines the electric vehicle experience with industry-leading range, cutting-edge technology, and a refined interior that elevates the driving experience.
+        </p>
+
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <div class="slide"><img src="foto/Lucid Air.jpg" alt="Lucid Air - Front View"></div>
+            <div class="slide"><img src="foto/Lucid Air side.jpg" alt="Lucid Air - Side View"></div>
+            <div class="slide"><img src="foto/lucid-air-interior.webp" alt="Lucid Air - Interior"></div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="changeSlide(-1)">Previous</button>
+        <button class="next" onclick="changeSlide(1)">Next</button>
+
+        <h2>Key Specifications</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Battery Range</td>
+                <td>406 - 516 miles</td>
+            </tr>
+            <tr>
+                <td>Horsepower</td>
+                <td>480 - 1,200 HP</td>
+            </tr>
+            <tr>
+                <td>0-60 mph</td>
+                <td>2.5 - 4.8 seconds</td>
+            </tr>
+            <tr>
+                <td>Top Speed</td>
+                <td>155 - 200 mph</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>Starts at $77,400</td>
+            </tr>
+        </table>
+
+        <h2>Why Buy a Lucid Air?</h2>
+        <p>
+            The Lucid Air sets a new standard for electric luxury sedans with its extraordinary range, rapid charging, and an elegant design that prioritizes both comfort and sustainability.
+        </p>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        let slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.display = "none");
+            slides[index].style.display = "block";
+        }
+
+        function changeSlide(direction) {
+            slideIndex += direction;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            showSlide(slideIndex);
+        }
+
+        showSlide(slideIndex);
+    </script>
+    
+    <!-- Footer -->
+    <footer>
+        <h3>&copy; 2025 Car Dealership. All rights reserved.</h3>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
