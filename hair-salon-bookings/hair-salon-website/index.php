@@ -203,7 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['contact_submit'])) {
 <body>
     <header>
         <div class="logo">
-            <img src="assets/logo.svg" alt="Salon Logo">
+            <img src="assets/logo.jpg" alt="Salon Logo">
         </div>
         <nav>
             <ul>
