@@ -44,19 +44,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['contact_submit'])) {
         header {
             background: #fff;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            padding: 0 0 10px 0;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            min-height: 80px;
         }
         .logo img {
             height: 60px;
-            margin: 20px 0 0 30px;
+            margin: 0;
+            display: block;
         }
         nav ul {
             list-style: none;
             display: flex;
             gap: 30px;
             margin: 0;
-            padding: 20px 30px 0 30px;
-            justify-content: flex-end;
+            padding: 0;
+            align-items: center;
         }
         nav ul li {
             display: inline;
@@ -184,9 +195,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['contact_submit'])) {
             transform: translateY(-5px);
             background: #e6e9f9;
         }
+        @media (max-width: 900px) {
+            .header-flex {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 10px;
+                min-height: 60px;
+            }
+            nav ul {
+                gap: 10px;
+                padding: 10px 0 0 0;
+            }
+            .logo img {
+                margin: 10px 0 0 0;
+                height: 40px;
+            }
+        }
         @media (max-width: 600px) {
             .container {
                 padding: 20px 8px;
+            }
+            .header-flex {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 5px;
             }
             nav ul {
                 flex-direction: column;
@@ -194,24 +226,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['contact_submit'])) {
                 padding: 10px 0 0 0;
             }
             .logo img {
-                margin: 10px 0 0 10px;
-                height: 40px;
+                margin: 10px 0 0 0;
+                height: 36px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="assets/logo.jpg" alt="Salon Logo">
+        <div class="header-flex">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Salon Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.php" class="active">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="book.php">Book Now</a></li>
+                    <li><a href="admin.php">Admin Login</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.php" class="active">Home</a></li>
-                <li><a href="services.php">Services</a></li>
-                <li><a href="book.php">Book Now</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
         <div class="container">
@@ -256,7 +291,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['contact_submit'])) {
         </div>
     </main>
     <footer>
-        <p>&copy; 2023 Hair Salon. All rights reserved.</p>
+        <p>&copy; 2025 Hair Salon. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -124,6 +124,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background: #725CAD;
             color: #fff;
         }
+        /* Custom colors for specific buttons */
+        .button-back {
+            background: #1A936F; /* Green */
+            color: #fff;
+            border: 1.5px solid #1A936F;
+        }
+        .button-back:hover {
+            background: #FF6F61; /* Coral on hover */
+            color: #fff;
+            border: 1.5px solid #FF6F61;
+        }
+        .button-services {
+            background: #FF6F61; /* Coral */
+            color: #fff;
+            border: 1.5px solid #FF6F61;
+        }
+        .button-services:hover {
+            background: #1A936F; /* Green on hover */
+            color: #fff;
+            border: 1.5px solid #1A936F;
+        }
         @media (max-width: 600px) {
             .container {
                 padding: 18px 6px;
@@ -158,10 +179,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="time">Time:</label>
             <input type="time" name="time" required>
             <button type="submit">Book Now</button>
-            <a href="index.php" class="button" style="margin-top:10px;">Back to Home</a>
-            <a href="services.php" class="button" style="margin-top:10px; background:#e6e9f9; color:#725CAD; border:1.5px solid #725CAD;">View Services</a>
+            <a href="index.php" class="button button-back" style="margin-top:10px;">Back to Home</a>
+            <a href="services.php" class="button button-services" style="margin-top:10px;">View Services</a>
         </form>
     <?php endif; ?>
+    <!-- Removed duplicate Back to Home button -->
 </div>
 </body>
 </html>

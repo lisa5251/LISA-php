@@ -36,6 +36,18 @@
                 <img src="assets/color3.jpg" alt="Balayage">
                 <h3>Balayage</h3>
             </div>
+            <div class="service-card">
+                <img src="assets/color4.jpg" alt="Ombre">
+                <h3>Ombre</h3>
+            </div>
+            <div class="service-card">
+                <img src="assets/color5.jpg" alt="Root Touch-Up">
+                <h3>Root Touch-Up</h3>
+            </div>
+            <div class="service-card">
+                <img src="assets/color6.jpg" alt="Gloss/Toner">
+                <h3>Gloss/Toner</h3>
+            </div>
         </div>
         <a href="index.php" class="button">Back to Home</a>
     </div>
