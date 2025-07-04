@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #0B1D51;
+}
+
+header, .container {
+    background: #fff;
+}
+
+h1, h2, h3 {
+    color: #0B1D51;
+}
+
+nav ul li a {
+    color: #0B1D51;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: #725CAD;
+    color: #fff;
+}
+
+.button, button, .service-card:hover {
+    background: #725CAD;
+    color: #fff !important;
+    border: none;
+}
+
+.button:hover, button:hover {
+    background: #0B1D51;
+    color: #fff !important;
+}
+
+.service-card {
+    border: 2px solid #725CAD;
+}
+
+.service-card h3 {
+    color: #725CAD;
+}
+
+.success {
+    color: #0B1D51;
+    background: #e6e9f9;
+}
+
+.error {
+    color: #fff;
+    background: #725CAD;
+}
+
+/* Service Gallery Styles */
+.services-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+.service-card {
+    background: #faf6f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 16px;
+    width: 170px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.service-card:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+.service-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.service-card h3 {
+    margin: 0;
+    color: #b47b3b;
+    font-size: 1.1em;
+}
