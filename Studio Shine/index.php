@@ -65,7 +65,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <a href="index.php" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-primary"><span class="text-dark">Studio</span> Shine</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -79,7 +79,55 @@
                     <a href="price.php" class="nav-item nav-link">Pricing</a>
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="booknow.php" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                <div style="position: relative; display: inline-block;">
+                    <!-- Book Now Button -->
+                    <button onclick="toggleMenu()" 
+                        style="background-color: #f89d91; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 10px;">
+                        Book Now
+                    </button>
+
+                    <!-- Dropdown Menu FIXED -->
+                    <div id="menu" 
+                        style="
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background-color: white;
+                            min-width: 180px;
+                            border-radius: 10px;
+                            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                            z-index: 9999; /* MAKE SURE MENU STAYS ON TOP */
+                        ">
+                        <a href="booknow.php" 
+                        style="display: block; padding: 12px 16px; text-decoration: none; color: #f89d91; font-weight: bold;">
+                        Book Appointment
+                        </a>
+                        <a href="admin_login.php" 
+                        style="display: block; padding: 12px 16px; text-decoration: none; color: #f89d91; font-weight: bold;">
+                        Sign in as Admin
+                        </a>
+                    </div>
+                    </div>
+
+                    <script>
+                    function toggleMenu() {
+                        var menu = document.getElementById("menu");
+                        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+                    }
+
+                    window.onclick = function(event) {
+                        if (!event.target.matches('button')) {
+                        var menu = document.getElementById("menu");
+                        if (menu) {
+                            menu.style.display = "none";
+                        }
+                        }
+                    }
+                    </script>
+                            </div>
+                        </nav>
+                    </div>
             </div>
         </nav>
     </div>
@@ -102,7 +150,7 @@
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Hair Salon</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Studio Shine</h3>
                             <p class="mx-md-5 px-5">Welcome to Studio Shine where style meets elegance. We're here to make you look and feel your best!</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="book.html">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="booknow.php">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +161,7 @@
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Hair Salon</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Elevate Your Style</h3>
                             <p class="mx-md-5 px-5">Enjoy a fresh, stylish experience in our beautifully designed salon. Let our talented team transform your hair and boost your confidence.</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="book.html">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="booknow.php">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -124,7 +172,7 @@
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Hair Salon</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Professional Hair Care</h3>
                             <p class="mx-md-5 px-5">Experience the ultimate in hair care with our professional treatments designed to nourish and revitalize your hair. Our skilled stylists use only the best products to ensure your hair looks and feels amazing.</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="book.html">Make Appointment</a>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="booknow.php">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -282,7 +330,7 @@
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Saturday : 9:00 AM - 6:00 PM</li>
                             <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sunday : Closed</li>
                         </ul>
-                        <a href="booknow.html" class="btn btn-primary mt-2">Book Now</a>
+                        <a href="booknow.php" class="btn btn-primary mt-2">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -506,7 +554,7 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="index.php" class="navbar-brand">
                         <h1 class="mb-3 text-white"><span class="text-primary">Studio Shine</span> Salon</h1>
                     </a>
                     <p>Experience the best in hair care and styling at Studio Shine Salon. Our talented team is dedicated to making you look and feel your absolute best, whether you need a fresh cut, vibrant color, or a complete transformation.</p>

@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <a href="index.php" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-primary"><span class="text-dark">Studio</span> Shine</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -58,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <?php if ($success): ?>
                             <div class="alert alert-success text-center" role="alert">
                                 Your appointment has been booked!<br>
-                                <a href="booknow.html" class="btn btn-primary mt-3">Book Another Appointment</a>
-                                <a href="index.html" class="btn btn-secondary mt-3">Back to Home</a>
+                                <a href="booknow.php" class="btn btn-primary mt-3">Book Another Appointment</a>
+                                <a href="index.php" class="btn btn-secondary mt-3">Back to Home</a>
                             </div>
                         <?php else: ?>
-                            <form id="bookingForm" method="post" action="booknow.html" novalidate="novalidate">
+                            <form id="bookingForm" method="post" action="booknow.php" novalidate="novalidate">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <input type="text" class="form-control border-0 p-4" name="name" placeholder="Your Name" required>
@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="index.php" class="navbar-brand">
                         <h1 class="mb-3 text-white"><span class="text-primary">Studio Shine</span> Salon</h1>
                     </a>
                     <p>Experience the best in hair care and styling at Studio Shine Salon. Our talented team is dedicated to making you look and feel your absolute best, whether you need a fresh cut, vibrant color, or a complete transformation.</p>
@@ -133,11 +133,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="col-sm-6 mb-5">
                             <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                                <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                                <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                                <a class="text-white-50 mb-2" href="price.html"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                                <a class="text-white-50" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                <a class="text-white-50 mb-2" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-white-50 mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                                <a class="text-white-50 mb-2" href="service.php"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                                <a class="text-white-50 mb-2" href="price.php"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
+                                <a class="text-white-50" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-5">

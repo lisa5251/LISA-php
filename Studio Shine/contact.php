@@ -65,7 +65,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <a href="index.php" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-primary"><span class="text-dark">Studio</span> Shine</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -156,7 +156,7 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="index.php" class="navbar-brand">
                         <h1 class="mb-3 text-white"><span class="text-primary">Studio Shine</span> Salon</h1>
                     </a>
                     <p>Experience the best in hair care and styling at Studio Shine Salon. Our talented team is dedicated to making you look and feel your absolute best, whether you need a fresh cut, vibrant color, or a complete transformation.</p>
